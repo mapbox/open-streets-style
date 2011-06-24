@@ -217,7 +217,7 @@
         "host": "localhost",
         "user": "gis",
         "extent": "",
-        "table": "( SELECT way,aeroway \nFROM planet_osm_polygon\nWHERE \"aeroway\" IN ('apron','runway','taxiway')\nORDER BY z_order asc ) AS aero_poly",
+        "table": "( SELECT way,aeroway \nFROM planet_osm_polygon\nWHERE \"aeroway\" IN ('apron','runway','taxiway','helipad')\nORDER BY z_order asc ) AS aero_poly",
         "password": "gis",
         "type": "postgis",
         "port": "5432"

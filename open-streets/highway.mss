@@ -350,3 +350,9 @@
     [highway='secondary'] { marker-transform:"scale(1.2)"; }
   }
 }*/
+
+/* ---- AERO ---- */
+.aero.poly[zoom>13] {
+  line-color:@road_line;
+  polygon-fill:lighten(@road_line,10);
+}
