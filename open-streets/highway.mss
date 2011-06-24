@@ -315,7 +315,7 @@
   [zoom=15] { marker-width: 3; }
   [zoom=16] { marker-width: 6; }
   [zoom=17] { marker-width: 8; }
-  [zoom=17] { marker-width: 10; }
+  [zoom=18] { marker-width: 12; marker-line-width: 1.5; }
 }
 
 /* ---- ONE WAY ARROWS ---- */
