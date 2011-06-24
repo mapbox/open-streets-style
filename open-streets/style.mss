@@ -22,6 +22,7 @@ extent settings. See the README for more info.
 @agriculture:#f4f0e0;
 @grass:     lighten(@forest,5);
 @park:      lighten(@forest,10);
+@beach:     #ffeec7;
 @building:  darken(#e8e4e4,8);
 
 /* ---- NATURAL & LANDUSE ---- */
@@ -68,6 +69,10 @@ Map { background-color: @water; }
 
 .agriculture[zoom>9] {
   polygon-fill:@agriculture;
+}
+
+.beach[zoom>9] {
+  polygon-fill:@beach;
 }
 
 .grass[zoom>9] {
