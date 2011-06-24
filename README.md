@@ -5,6 +5,8 @@
 This style has been designed to work with a PostGIS database created with
 [osm2pgsql][1]. Test databases used the default import style file.
 
+[1]: http://wiki.openstreetmap.org/wiki/Osm2pgsql
+
 ## Setup (for TileMill)
 
 1. Edit the file `configure.py` so the database settings match your setup.
