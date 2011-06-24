@@ -39,11 +39,8 @@
 /* Motorway Links */
 .route.line[highway='motorway_link'][tunnel='no'],
 .route.tunnel[highway='motorway_link'] {
-  [zoom>6] { line-color:@motorway_line; line-cap:round; line-join:round; }
-  .tunnel[zoom>6] { line-dasharray:4,2; line-cap:butt; }
-  [zoom=7] { line-width:0.2; line-opacity:0.6; }
-  [zoom=8] { line-width:0.4; line-opacity:0.8; }
-  [zoom=9] { line-width:0.6; }
+  [zoom>9] { line-color:@motorway_line; line-cap:round; line-join:round; }
+  .tunnel[zoom>9] { line-dasharray:4,2; line-cap:butt; }
   [zoom=10]{ line-width:0.8; }
   [zoom=11]{ line-width:1; }
   [zoom=12]{ line-width:1.0 + 2; }
@@ -55,10 +52,7 @@
   [zoom=18]{ line-width:14 + 2.5; }
 }
 .route.bridge::b[highway='motorway_link'] {
-  [zoom>6] { line-color:darken(@motorway_line,15); line-cap:butt; line-join:round; }
-  [zoom=7] { line-width:0.2; line-opacity:0.6 + 1; }
-  [zoom=8] { line-width:0.4; line-opacity:0.8 + 1; }
-  [zoom=9] { line-width:0.6 + 1; }
+  [zoom>9] { line-color:darken(@motorway_line,15); line-cap:butt; line-join:round; }
   [zoom=10]{ line-width:0.8 + 1; }
   [zoom=11]{ line-width:1; }
   [zoom=12]{ line-width:1.0 + 2; }
