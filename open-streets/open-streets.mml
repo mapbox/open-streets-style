@@ -423,6 +423,24 @@
       "class": "route bridge layer5 fill"
     },
     {
+      "name": "placenames-medium",
+      "geometry": "point",
+      "id": "placenames-medium",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "Datasource": {
+        "geometry_field": "way",
+        "dbname": "gis",
+        "host": "localhost",
+        "user": "gis",
+        "extent": "",
+        "table": "( SELECT way,place,name\n  FROM planet_osm_point\n  WHERE place IN ('city','metropolis','town','large_town','small_town')\n) AS placenames",
+        "password": "gis",
+        "type": "postgis",
+        "port": "5432"
+      },
+      "class": "placename medium"
+    },
+    {
       "name": "highway-label",
       "geometry": "linestring",
       "id": "highway-label",
