@@ -311,10 +311,10 @@
   marker-fill:@road_fill;
   marker-line-color:@road_line;
   marker-line-width:1;
-  [zoom=14] { marker-width: 1.5; }
-  [zoom=15] { marker-width: 3; }
-  [zoom=16] { marker-width: 6; }
-  [zoom=17] { marker-width: 8; }
+  [zoom=14] { marker-width: 2; }
+  [zoom=15] { marker-width: 4; }
+  [zoom=16] { marker-width: 7; }
+  [zoom=17] { marker-width: 9; }
   [zoom=18] { marker-width: 12; marker-line-width: 1.5; }
 }
 
