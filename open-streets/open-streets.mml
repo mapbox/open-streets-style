@@ -117,23 +117,23 @@
       "class": "grass"
     },
     {
-      "name": "beach", 
-      "geometry": "polygon", 
-      "id": "beach", 
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over", 
+      "name": "beach",
+      "geometry": "polygon",
+      "id": "beach",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way", 
-        "dbname": "gis", 
-        "host": "localhost", 
-        "user": "gis", 
-        "extent": "", 
-        "table": "( SELECT way,\"natural\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" = 'beach'\n  ORDER BY z_order asc\n) AS beach", 
-        "password": "gis", 
-        "type": "postgis", 
+        "geometry_field": "way",
+        "dbname": "gis",
+        "host": "localhost",
+        "user": "gis",
+        "extent": "",
+        "table": "( SELECT way,\"natural\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" = 'beach'\n  ORDER BY z_order asc\n) AS beach",
+        "password": "gis",
+        "type": "postgis",
         "port": "5432"
-      }, 
+      },
       "class": "beach"
-    }, 
+    },
     {
       "name": "park",
       "geometry": "polygon",
