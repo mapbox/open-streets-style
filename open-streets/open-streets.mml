@@ -451,7 +451,7 @@
         "host": "localhost",
         "user": "gis",
         "extent": "",
-        "table": "( SELECT name,highway,way FROM planet_osm_line\n          WHERE \"highway\" IS NOT NULL\n          AND \"name\" IS NOT NULL\n          ORDER BY z_order asc ) AS highway_label",
+        "table": "(select way,name,highway, case when oneway in\n  ('yes','true','1') then 'yes'::text end as oneway\nfrom planet_osm_line\nwhere \"highway\" is not null\nand (\"name\" is not null or \"oneway\" is not null)\norder by z_order asc ) as highway_label",
         "password": "gis",
         "type": "postgis",
         "port": "5432"

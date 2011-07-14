@@ -313,8 +313,8 @@
 }
 
 /* ---- ONE WAY ARROWS ---- */
-/* FIXME */
-/*.route.label::arrow[oneway='yes'][zoom>15] {
+/* TODO: oneway='-1' */
+.highway-label::arrow[oneway='yes'][zoom>15] {
   marker-type:arrow;
   marker-line-width:1;
   marker-line-opacity:0.5;
