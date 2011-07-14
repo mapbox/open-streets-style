@@ -343,10 +343,63 @@
     [highway='primary'],
     [highway='secondary'] { marker-transform:"scale(1.2)"; }
   }
-}*/
+}
 
 /* ---- AERO ---- */
 .aero.poly[zoom>13] {
-  line-color:@road_line;
-  polygon-fill:lighten(@road_line,10);
+  line-color:lighten(@road_line,5);
+  polygon-fill:lighten(#fff,10);
+}
+
+.route.line[aeroway='runway'][zoom>=11],
+.route.line[aeroway='taxiway'][zoom>=11] {
+  line-cap: square;
+  line-color: lighten(@road_line,5);
+}
+.route.fill[aeroway='runway'][zoom>=12],
+.route.fill[aeroway='taxiway'][zoom>=12] {
+  line-cap: square;
+  line-color: lighten(#fff,10);
+}
+
+.route.line[aeroway='runway'] {
+  [zoom=11] { line-width: 2; }
+  [zoom=12] { line-width: 1 + 2; }
+  [zoom=13] { line-width: 3 + 2; }
+  [zoom=14] { line-width: 9 + 2; }
+  [zoom=15] { line-width: 16 + 2; }
+  [zoom=16] { line-width: 22 + 2; }
+  [zoom=17] { line-width: 28 + 2; }
+  [zoom=18] { line-width: 34 + 2; }
+}
+
+.route.fill[aeroway='runway'] {
+  [zoom=12] { line-width: 1; }
+  [zoom=13] { line-width: 3; }
+  [zoom=14] { line-width: 9; }
+  [zoom=15] { line-width: 16; }
+  [zoom=16] { line-width: 22; }
+  [zoom=17] { line-width: 28; }
+  [zoom=18] { line-width: 34; }
+}
+
+.route.line[aeroway='taxiway'] {
+  [zoom=11] { line-width: 1; }
+  [zoom=12] { line-width: 0.8 + 1.8; }
+  [zoom=13] { line-width: 1 + 2; }
+  [zoom=14] { line-width: 2 + 2; }
+  [zoom=15] { line-width: 6 + 2; }
+  [zoom=16] { line-width: 10 + 2; }
+  [zoom=17] { line-width: 10 + 2; }
+  [zoom=18] { line-width: 14 + 2; }
+}
+
+.route.fill[aeroway='taxiway'] {
+  [zoom=12] { line-width: 0.8; }
+  [zoom=13] { line-width: 1; }
+  [zoom=14] { line-width: 2; }
+  [zoom=15] { line-width: 6; }
+  [zoom=16] { line-width: 10; }
+  [zoom=17] { line-width: 10; }
+  [zoom=18] { line-width: 14; }
 }
