@@ -403,3 +403,12 @@
   [zoom=17] { line-width: 10; }
   [zoom=18] { line-width: 14; }
 }
+
+/* ---- PARKING ---- */
+.parking[zoom>13] {
+  polygon-fill:lighten(@land,3);
+  line-color:darken(@land,6);
+  [zoom=14] { line-width:0.4; }
+  [zoom=15] { line-width:0.6; }
+  [zoom>15] { line-width:0.8; }
+}

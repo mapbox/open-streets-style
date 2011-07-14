@@ -70,15 +70,33 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "extent": "",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "file": "http://tilemill-data.s3.amazonaws.com/osm/processed_p.zip",
         "password": "gis",
         "type": "shape",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": ""
+    },
+    {
+      "name": "amenity-areas",
+      "geometry": "polygon",
+      "id": "amenity-areas",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "Datasource": {
+        "geometry_field": "way",
+        "dbname": "gis",
+        "host": "localhost",
+        "user": "gis",
+        "extent": "",
+        "table": "(select way,amenity from planet_osm_polygon\nwhere amenity in ('hospital','college','school','university')\nand (building is null or building not in ('no'))\n) as campus",
+        "password": "gis",
+        "type": "postgis",
+        "port": "5432"
+      },
+      "class": "campus"
     },
     {
       "name": "agriculture",
@@ -87,14 +105,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,landuse FROM planet_osm_polygon\nWHERE \"landuse\" IN ('allotments','farm','farmland','farmyard',\n 'orchard','vineyard')\nORDER BY z_order asc ) AS agriculture",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "agriculture"
     },
@@ -213,16 +231,34 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,aeroway \nFROM planet_osm_polygon\nWHERE \"aeroway\" IN ('apron','runway','taxiway','helipad')\nORDER BY z_order asc ) AS aero_poly",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "aero poly"
+    },
+    {
+      "name": "parking-area",
+      "geometry": "polygon",
+      "id": "parking-area",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "Datasource": {
+        "geometry_field": "way",
+        "dbname": "gis",
+        "host": "localhost",
+        "user": "gis",
+        "extent": "",
+        "table": "(select way,amenity from planet_osm_polygon\nwhere amenity = 'parking'\n) as parking",
+        "password": "gis",
+        "type": "postgis",
+        "port": "5432"
+      },
+      "class": "parking"
     },
     {
       "name": "route-tunnels",
@@ -231,14 +267,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( select way,highway from planet_osm_line \n  where highway in\n  ( 'motorway', 'motorway_link', 'trunk', 'trunk_link', \n    'primary', 'primary_link', 'secondary', 'secondary_link',\n    'tertiary', 'tertiary_link', 'residential', 'unclassified' )\n  and tunnel in ( 'yes', 'true', '1' )\n  order by z_order ) as roads",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "route tunnel"
     },
@@ -294,7 +330,7 @@
         "type": "postgis",
         "port": "5432"
       },
-      "class": "route fill oneway"
+      "class": "route fill"
     },
     {
       "name": "building",

@@ -41,14 +41,23 @@ Map { background-color: @water; }
 }
 .water-outline[zoom>11] {
   line-color:darken(@water,10);
-  [zoom=12] { line-width:1; }
-  [zoom=13] { line-width:1.5; }
-  [zoom>13] { line-width:2; }
+  [zoom=12] { line-width:0.8; }
+  [zoom=13] { line-width:1.2; }
+  [zoom=14] { line-width:1.4; }
+  [zoom=15] { line-width:1.6; }
+  [zoom=16] { line-width:1.8; }
+  [zoom>16] { line-width:2; }
 }
 
 .forest[zoom>7] {
-  polygon-fill:@forest;
-  /* outlines create faux-blur effect */
+  /* At lower zoom levels forests are dense and distracting. 
+     Ramp them in gradually. */
+  [zoom=8] { polygon-fill:lighten(@forest,16); }
+  [zoom=9] { polygon-fill:lighten(@forest,12); }
+  [zoom=10]{ polygon-fill:lighten(@forest,8); }
+  [zoom=11]{ polygon-fill:lighten(@forest,4); }
+  [zoom>11] { polygon-fill:@forest; }
+  /* These outlines create a slight faux-blur effect. */
   [zoom>14] {
     line-color:@forest;
     line-opacity:0.4;
@@ -57,6 +66,7 @@ Map { background-color: @water; }
   [zoom=16] { line-width:2.6; }
   [zoom=17] { line-width:3.6; }
   [zoom>=18] { line-width:4.6; }
+  /* a second outline for addtional blur */
   ::xtra {
     [zoom>16] {
       line-color:@forest;
@@ -81,12 +91,33 @@ Map { background-color: @water; }
 
 .park[zoom>9] {
   polygon-fill:@park;
-  [zoom>13] {
-    line-color:darken(@park,25);
-    line-width:0.6;
-  }
+  [zoom>13] { line-color:darken(@park,20); }
+  [zoom=14] { line-width:0.6; }
+  [zoom=15] { line-width:0.8; }
+  [zoom>15] { line-width:1.2; }
 }
 
+/* ---- CAMPUSES ---- */
+/* Note that amenity=school, amenity=hospital, etc are ideally polygons of the
+   *campus*, but are occasionally applied to the physical building instead. */
+@campus: #ECF;
+.campus[zoom>9] {
+  polygon-opacity:0.2;
+  line-opacity:0.4;
+  polygon-fill:@campus;
+  line-color:spin(darken(@campus,20),20);
+  [zoom=10] { line-width:0.2; }
+  [zoom=11] { line-width:0.3; }
+  [zoom=12] { line-width:0.4; }
+  [zoom=13] { line-width:0.5; }
+  [zoom=14] { line-width:0.6; }
+  [zoom=15] { line-width:0.7; }
+  [zoom=16] { line-width:0.8; }
+  [zoom=17] { line-width:0.9; }
+  [zoom=18] { line-width:1.0; }
+}
+
+/* ---- BUILDINGS ---- */
 /* Transparent buildings account for situations where routes go
    in or under them */
 .building[zoom>10][zoom<17] {
