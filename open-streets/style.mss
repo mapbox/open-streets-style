@@ -52,10 +52,10 @@ Map { background-color: @water; }
 .forest[zoom>7] {
   /* At lower zoom levels forests are dense and distracting. 
      Ramp them in gradually. */
-  [zoom=8] { polygon-fill:lighten(@forest,16); }
-  [zoom=9] { polygon-fill:lighten(@forest,12); }
-  [zoom=10]{ polygon-fill:lighten(@forest,8); }
-  [zoom=11]{ polygon-fill:lighten(@forest,4); }
+  [zoom=8] { polygon-fill:lighten(@forest,12); }
+  [zoom=9] { polygon-fill:lighten(@forest,9); }
+  [zoom=10]{ polygon-fill:lighten(@forest,6); }
+  [zoom=11]{ polygon-fill:lighten(@forest,3); }
   [zoom>11] { polygon-fill:@forest; }
   /* These outlines create a slight faux-blur effect. */
   [zoom>14] {
@@ -101,16 +101,15 @@ Map { background-color: @water; }
 /* Note that amenity=school, amenity=hospital, etc are ideally polygons of the
    *campus*, but are occasionally applied to the physical building instead. */
 @campus: #ECF;
-.campus[zoom>9] {
+.campus[zoom>10] {
   polygon-opacity:0.2;
-  line-opacity:0.4;
   polygon-fill:@campus;
-  line-color:spin(darken(@campus,20),20);
-  [zoom=10] { line-width:0.2; }
-  [zoom=11] { line-width:0.3; }
-  [zoom=12] { line-width:0.4; }
-  [zoom=13] { line-width:0.5; }
-  [zoom=14] { line-width:0.6; }
+  [zoom>12] {
+    line-opacity:0.4;
+    line-color:spin(darken(@campus,20),20);
+  }
+  [zoom=13] { line-width:0.3; }
+  [zoom=14] { line-width:0.5; }
   [zoom=15] { line-width:0.7; }
   [zoom=16] { line-width:0.8; }
   [zoom=17] { line-width:0.9; }
