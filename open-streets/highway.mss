@@ -16,6 +16,7 @@
 @footway:       #6B9;
 @cycleway:      #69B;
 @bridge:        rgba(64,64,64,0.66);
+@rail:          #999;
 
 /* ---- ROADS ---- */
 
@@ -557,4 +558,23 @@
   [zoom=14] { line-width:0.4; }
   [zoom=15] { line-width:0.6; }
   [zoom>15] { line-width:0.8; }
+}
+
+/* ---- RAILWAYS ---- */
+/* TODO: Railway bridges */
+.route.fill[railway='rail'][zoom>10] {
+  line-color:@rail;
+  line-width:0.3;
+  line-dasharray:4,3;
+  ::x {
+    line-color:lighten(@rail,10);
+    line-dasharray:0,4,3,0;
+    line-width:0.3;
+  }
+  [zoom=13], ::x[zoom<14] { line-width:0.4; }
+  [zoom=14], ::x[zoom=14] { line-width:0.5; }
+  [zoom=15], ::x[zoom=15] { line-width:0.6; }
+  [zoom=16], ::x[zoom=16] { line-width:0.8; }
+  [zoom=17], ::x[zoom=17] { line-width:1.5; }
+  [zoom=18], ::x[zoom=18] { line-width:2.0; }
 }
