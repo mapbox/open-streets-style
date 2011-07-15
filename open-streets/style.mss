@@ -35,7 +35,8 @@ Map { background-color: @water; }
   polygon-fill: @land;
 }
 
-.water[zoom>6] {
+#ne-lakes[zoom<6],
+.water[zoom>5] {
   polygon-fill:@water;
   polygon-gamma:0.8;
 }
