@@ -49,6 +49,13 @@ Map { background-color: @water; }
   [zoom>16] { line-width:2; }
 }
 
+.wetland[zoom>10] {
+  polygon-pattern-file:url(../project/open-streets/res/wetland-8.png);
+  [zoom>13] { polygon-pattern-file:url(../project/open-streets/res/wetland-16.png); }
+  [zoom>15] { polygon-pattern-file:url(../project/open-streets/res/wetland-32.png); }
+  polygon-pattern-alignment: global;
+}
+
 .forest[zoom>7] {
   /* At lower zoom levels forests are dense and distracting. 
      Ramp them in gradually. */

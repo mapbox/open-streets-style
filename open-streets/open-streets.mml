@@ -213,16 +213,34 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT \"natural\", \"landuse\", \"waterway\", \"way\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('lake','water')\n  OR \"waterway\" IN ('canal','mill_pond','riverbank')\n  OR \"landuse\" IN ('basin','reservoir','water')\n  ORDER BY z_order asc\n) AS water",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "water"
+    },
+    {
+      "name": "wetland",
+      "geometry": "polygon",
+      "id": "wetland",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "Datasource": {
+        "geometry_field": "way",
+        "dbname": "gis",
+        "host": "localhost",
+        "user": "gis",
+        "extent": "",
+        "table": "(select way,\"natural\" from planet_osm_polygon\nwhere \"natural\" in ('marsh','wetland')\n) as wetland",
+        "password": "gis",
+        "type": "postgis",
+        "port": "5432"
+      },
+      "class": "wetland"
     },
     {
       "name": "aero-poly",
