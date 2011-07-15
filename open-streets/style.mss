@@ -57,9 +57,13 @@ Map { background-color: @water; }
   polygon-pattern-alignment: global;
 }
 
-.forest[zoom>7] {
+.forest[zoom>6][size='huge'],
+.forest[zoom>7][size='large'],
+.forest[zoom>8][size='medium'],
+.forest[zoom>9][size='small'] {
   /* At lower zoom levels forests are dense and distracting. 
      Ramp them in gradually. */
+  [zoom=7] { polygon-fill:lighten(@forest,14); }
   [zoom=8] { polygon-fill:lighten(@forest,12); }
   [zoom=9] { polygon-fill:lighten(@forest,9); }
   [zoom=10]{ polygon-fill:lighten(@forest,6); }
@@ -93,7 +97,13 @@ Map { background-color: @water; }
   polygon-fill:@beach;
 }
 
-.grass[zoom>9] {
+.grass[zoom>9][size='huge'],
+.grass[zoom>10][size='large'],
+.grass[zoom>11][size='medium'],
+.grass[zoom>12][size='small'] {
+  /* lighten relative to forest ramping */
+  [zoom=10]{ polygon-fill:lighten(@grass,6); }
+  [zoom=11]{ polygon-fill:lighten(@grass,3); }
   polygon-fill:@grass;
 }
 
