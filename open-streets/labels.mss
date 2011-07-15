@@ -40,7 +40,7 @@
 
 /* ---- HIGHWAY ---- */
 
-.highway-label {
+.highway-label[zoom>11] {
   text-face-name:@font_reg;
   text-halo-radius:1;
   text-placement:line;

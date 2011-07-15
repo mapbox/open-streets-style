@@ -229,9 +229,9 @@
   [zoom=13]{ line-width:0.8 + 1; }
   [zoom=14]{ line-width:1.0 + 1.8; }
   [zoom=15]{ line-width:3.5 + 2; }
-  [zoom=16]{ line-width:6 + 2; }
-  [zoom=17]{ line-width:8 + 2; }
-  [zoom>17]{ line-width:10 + 3; }
+  [zoom=16]{ line-width:6 + 2.5; }
+  [zoom=17]{ line-width:8 + 3; }
+  [zoom>17]{ line-width:10 + 4; }
 }
 .route.fill[highway='living_street'],
 .route.fill[highway='residential'],
