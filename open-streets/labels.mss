@@ -40,10 +40,6 @@
 
 /* ---- HIGHWAY ---- */
 
-.highway-shield {
-  /* TODO */
-}
-
 .highway-label {
   text-face-name:@font_reg;
   text-halo-radius:1;

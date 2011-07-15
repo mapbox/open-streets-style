@@ -17,17 +17,17 @@
       "geometry": "polygon",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "id": "world",
+      "name": "world",
       "Datasource": {
         "extent": "",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "file": "http://tilemill-data.s3.amazonaws.com/world_borders_merc.zip",
         "password": "gis",
         "type": "shape",
-        "port": "5432"
-      },
-      "name": "world"
+        "dbname": "gis"
+      }
     },
     {
       "name": "shoreline_300",
@@ -36,13 +36,13 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "extent": "",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "file": "http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip",
         "password": "gis",
         "type": "shape",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": ""
     },
@@ -53,13 +53,13 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "extent": "",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "file": "http://tilemill-data.s3.amazonaws.com/osm/processed_p.zip",
         "password": "gis",
         "type": "shape",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "water-outline"
     },
@@ -123,14 +123,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,landuse, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size FROM planet_osm_polygon\n          WHERE \"landuse\" IN ('grass', 'greenfield', 'meadow')\n            OR \"natural\" IN ('fell', 'heath', 'scrub')\n          ORDER BY z_order asc ) AS grass",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "grass"
     },
@@ -141,14 +141,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,\"natural\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" = 'beach'\n  ORDER BY z_order asc\n) AS beach",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "beach"
     },
@@ -159,14 +159,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT *, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size  FROM planet_osm_polygon\n          WHERE \"leisure\" IN ('dog_park', 'golf_course', 'pitch', 'park',\n            'playground', 'garden', 'common')\n            OR \"landuse\" IN ('allotments', 'cemetery','recreation_ground', 'village_green')\n          ORDER BY z_order asc ) AS park",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "park"
     },
@@ -177,14 +177,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT *, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size FROM planet_osm_polygon\n          WHERE \"natural\" IN ('wood') OR \"landuse\" IN ('forest','wood')\n          ORDER BY z_order asc ) AS forest",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "forest"
     },
@@ -195,14 +195,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT \"natural\", \"landuse\", \"waterway\", \"way\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('lake','water')\n  OR \"waterway\" IN ('canal','mill_pond','riverbank')\n  OR \"landuse\" IN ('basin','reservoir','water')\n  ORDER BY z_order asc\n) AS water",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "water-outline"
     },
@@ -321,14 +321,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT highway,way FROM planet_osm_point\n  WHERE \"highway\" = 'turning_circle' ) AS turning_circle",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "turning-circle"
     },
@@ -357,14 +357,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,building,aeroway\nFROM planet_osm_polygon\nWHERE (\"building\" IS NOT NULL\nAND \"building\" != 'no')\nOR \"aeroway\" IN ('terminal')\nORDER BY z_order asc ) AS building",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "building"
     },
@@ -375,14 +375,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND (layer IS NULL OR layer = '0')\n  ORDER BY z_order asc\n ) AS bridge_0",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "route bridge layer0 fill"
     },
@@ -393,14 +393,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '1'\n  ORDER BY z_order asc\n ) AS bridge_1",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "route bridge layer1 fill"
     },
@@ -411,14 +411,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '2'\n  ORDER BY z_order asc\n ) AS bridge_2",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "route bridge layer2 fill"
     },
@@ -429,14 +429,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '3'\n  ORDER BY z_order asc\n ) AS bridge_3",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "route bridge layer3 fill"
     },
@@ -447,14 +447,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '4'\n  ORDER BY z_order asc\n ) AS bridge_4",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "route bridge layer4 fill"
     },
@@ -465,14 +465,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '5'\n  ORDER BY z_order asc\n ) AS bridge_5",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "route bridge layer5 fill"
     },
@@ -483,14 +483,14 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
         "geometry_field": "way",
-        "dbname": "gis",
+        "port": "5432",
         "host": "localhost",
         "user": "gis",
         "extent": "",
         "table": "( SELECT way,place,name\n  FROM planet_osm_point\n  WHERE place IN ('city','metropolis','town','large_town','small_town')\n) AS placenames",
         "password": "gis",
         "type": "postgis",
-        "port": "5432"
+        "dbname": "gis"
       },
       "class": "placename medium"
     },
