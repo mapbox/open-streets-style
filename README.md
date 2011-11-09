@@ -24,14 +24,13 @@ OSM Extract imported into postgres
 
 ## Setup (for TileMill)
 
-Now download and the styles:
+Download and the styles:
 
     git clone git://github.com/mapbox/open-streets-style.git
-    cd open-streets-style
 
 Download the osm shapefiles into the layers sub-directory:
 
-    cd open-streets
+    cd open-streets-style/open-streets
     mkdir layers
     cd layers
     wget http://tilemill-data.s3.amazonaws.com/osm/processed_p.zip
@@ -40,12 +39,17 @@ Download the osm shapefiles into the layers sub-directory:
     unzip shoreline_300.zip
     cd ../../
 
-If you do not manually download these and provide the path during setup
-then they will be downloaded on the fly which will take a long time.
-
 Now edit the `configure.py` so the database and shapefiles settings match your setup.
 
-Then run the script:
+Make sure you can connect with the same set of options on the command line like:
+
+    psql osm
+
+Note: host, user, and password are often optional, but on some systems required. It depends
+on your postgres setup. Just be sure to understand you setup before blindly continuing.
+
+Then run the script which will fixup your shapefile paths and database connection settings
+in the styles 'mml' file.
 
     python configure.py
 
@@ -58,12 +62,8 @@ You can make a symlink like:
 
     ln -s `pwd`/open-streets ~/Documents/MapBox/project/open-streets
 
-Now go start TileMill and you should see the project available.
 
-Unless you specified paths to local copies of `processed_p.shp` and 
-`shoreline_300.shp` in config.py, these files will be downloaded the first
-time you load the project in TileMill. They total approximately **360 MB**,
-thus will take at least a few minutes to download.
+Now go start TileMill and you should see the project available.
 
 
 ## Troubleshooting
