@@ -1,568 +1,685 @@
 {
-  "_center": {
-    "lat": 0,
-    "lon": 0,
-    "zoom": 2
-  },
-  "_format": "png",
-  "_interactivity": false,
-  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-  "Stylesheet": [
-    "style.mss",
-    "borders.mss",
-    "highway.mss",
-    "labels.mss"
-  ],
   "Layer": [
     {
-      "geometry": "polygon",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "id": "world",
-      "name": "world",
       "Datasource": {
-        "extent": "",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "file": "http://tilemill-data.s3.amazonaws.com/world_borders_merc.zip",
-        "password": "gis",
-        "type": "shape",
-        "dbname": "gis"
-      }
-    },
+        "dbname": "osm", 
+        "extent": "", 
+        "file": "http://tilemill-data.s3.amazonaws.com/world_borders_merc.zip", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "type": "shape", 
+        "user": ""
+      }, 
+      "geometry": "polygon", 
+      "id": "world", 
+      "name": "world", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "shoreline_300",
-      "geometry": "polygon",
-      "id": "shoreline_300",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "extent": "",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "file": "http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip",
-        "password": "gis",
-        "type": "shape",
-        "dbname": "gis"
-      },
-      "class": ""
-    },
+        "dbname": "osm", 
+        "extent": "", 
+        "file": "./layers/shoreline_300.shp", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "type": "shape", 
+        "user": ""
+      }, 
+      "class": "", 
+      "geometry": "polygon", 
+      "id": "shoreline_300", 
+      "name": "shoreline_300", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "processed_p_outline",
-      "geometry": "polygon",
-      "id": "processed_p_outline",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "extent": "",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "file": "http://tilemill-data.s3.amazonaws.com/osm/processed_p.zip",
-        "password": "gis",
-        "type": "shape",
-        "dbname": "gis"
-      },
-      "class": "water-outline"
-    },
+        "dbname": "osm", 
+        "extent": "", 
+        "file": "./layers/processed_p.shp", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "type": "shape", 
+        "user": ""
+      }, 
+      "class": "water-outline", 
+      "geometry": "polygon", 
+      "id": "processed_p_outline", 
+      "name": "processed_p_outline", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "processed_p",
-      "geometry": "polygon",
-      "id": "processed_p",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "extent": "",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "file": "http://tilemill-data.s3.amazonaws.com/osm/processed_p.zip",
-        "password": "gis",
-        "type": "shape",
-        "dbname": "gis"
-      },
-      "class": ""
-    },
+        "dbname": "osm", 
+        "extent": "", 
+        "file": "./layers/processed_p.shp", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "type": "shape", 
+        "user": ""
+      }, 
+      "class": "", 
+      "geometry": "polygon", 
+      "id": "processed_p", 
+      "name": "processed_p", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "amenity-areas",
-      "geometry": "polygon",
-      "id": "amenity-areas",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "dbname": "gis",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "(select way,amenity from planet_osm_polygon\nwhere amenity in ('hospital','college','school','university')\nand (building is null or building not in ('no'))\n) as campus",
-        "password": "gis",
-        "type": "postgis",
-        "port": "5432"
-      },
-      "class": "campus"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "(select way,amenity from planet_osm_polygon\nwhere amenity in ('hospital','college','school','university')\nand (building is null or building not in ('no'))\n) as campus", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "campus", 
+      "geometry": "polygon", 
+      "id": "amenity-areas", 
+      "name": "amenity-areas", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "agriculture",
-      "geometry": "polygon",
-      "id": "agriculture",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,landuse FROM planet_osm_polygon\nWHERE \"landuse\" IN ('allotments','farm','farmland','farmyard',\n 'orchard','vineyard')\nORDER BY z_order asc ) AS agriculture",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "agriculture"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,landuse FROM planet_osm_polygon\nWHERE \"landuse\" IN ('allotments','farm','farmland','farmyard',\n 'orchard','vineyard')\nORDER BY z_order asc ) AS agriculture", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "agriculture", 
+      "geometry": "polygon", 
+      "id": "agriculture", 
+      "name": "agriculture", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "grass",
-      "geometry": "polygon",
-      "id": "grass",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,landuse, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size FROM planet_osm_polygon\n          WHERE \"landuse\" IN ('grass', 'greenfield', 'meadow')\n            OR \"natural\" IN ('fell', 'heath', 'scrub')\n          ORDER BY z_order asc ) AS grass",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "grass"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,landuse, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size FROM planet_osm_polygon\n          WHERE \"landuse\" IN ('grass', 'greenfield', 'meadow')\n            OR \"natural\" IN ('fell', 'heath', 'scrub')\n          ORDER BY z_order asc ) AS grass", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "grass", 
+      "geometry": "polygon", 
+      "id": "grass", 
+      "name": "grass", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "beach",
-      "geometry": "polygon",
-      "id": "beach",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,\"natural\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" = 'beach'\n  ORDER BY z_order asc\n) AS beach",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "beach"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,\"natural\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" = 'beach'\n  ORDER BY z_order asc\n) AS beach", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "beach", 
+      "geometry": "polygon", 
+      "id": "beach", 
+      "name": "beach", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "park",
-      "geometry": "polygon",
-      "id": "park",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT *, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size  FROM planet_osm_polygon\n          WHERE \"leisure\" IN ('dog_park', 'golf_course', 'pitch', 'park',\n            'playground', 'garden', 'common')\n            OR \"landuse\" IN ('allotments', 'cemetery','recreation_ground', 'village_green')\n          ORDER BY z_order asc ) AS park",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "park"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT *, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size  FROM planet_osm_polygon\n          WHERE \"leisure\" IN ('dog_park', 'golf_course', 'pitch', 'park',\n            'playground', 'garden', 'common')\n            OR \"landuse\" IN ('allotments', 'cemetery','recreation_ground', 'village_green')\n          ORDER BY z_order asc ) AS park", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "park", 
+      "geometry": "polygon", 
+      "id": "park", 
+      "name": "park", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "forest",
-      "geometry": "polygon",
-      "id": "forest",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT *, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size FROM planet_osm_polygon\n          WHERE \"natural\" IN ('wood') OR \"landuse\" IN ('forest','wood')\n          ORDER BY z_order asc ) AS forest",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "forest"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT *, (CASE \n            WHEN way_area >= 10000000 THEN 'huge'\n            WHEN way_area >= 1000000 THEN 'large'\n            WHEN way_area >= 100000 THEN 'medium'\n            ELSE 'small' END) AS size FROM planet_osm_polygon\n          WHERE \"natural\" IN ('wood') OR \"landuse\" IN ('forest','wood')\n          ORDER BY z_order asc ) AS forest", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "forest", 
+      "geometry": "polygon", 
+      "id": "forest", 
+      "name": "forest", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "water-outline",
-      "geometry": "polygon",
-      "id": "water-outline",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT \"natural\", \"landuse\", \"waterway\", \"way\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('lake','water')\n  OR \"waterway\" IN ('canal','mill_pond','riverbank')\n  OR \"landuse\" IN ('basin','reservoir','water')\n  ORDER BY z_order asc\n) AS water",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "water-outline"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT \"natural\", \"landuse\", \"waterway\", \"way\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('lake','water')\n  OR \"waterway\" IN ('canal','mill_pond','riverbank')\n  OR \"landuse\" IN ('basin','reservoir','water')\n  ORDER BY z_order asc\n) AS water", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "water-outline", 
+      "geometry": "polygon", 
+      "id": "water-outline", 
+      "name": "water-outline", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "ne-lakes",
-      "geometry": "polygon",
-      "id": "ne-lakes",
-      "srs": "",
       "Datasource": {
-        "extent": "",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/lakes.zip",
-        "password": "gis",
-        "type": "shape",
-        "dbname": "gis"
-      },
-      "class": ""
-    },
+        "dbname": "osm", 
+        "extent": "", 
+        "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/lakes.zip", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "type": "shape", 
+        "user": ""
+      }, 
+      "class": "", 
+      "geometry": "polygon", 
+      "id": "ne-lakes", 
+      "name": "ne-lakes", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": ""
+    }, 
     {
-      "name": "water",
-      "geometry": "polygon",
-      "id": "water",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT \"natural\", \"landuse\", \"waterway\", \"way\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('lake','water')\n  OR \"waterway\" IN ('canal','mill_pond','riverbank')\n  OR \"landuse\" IN ('basin','reservoir','water')\n  ORDER BY z_order asc\n) AS water",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "water"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT \"natural\", \"landuse\", \"waterway\", \"way\"\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('lake','water')\n  OR \"waterway\" IN ('canal','mill_pond','riverbank')\n  OR \"landuse\" IN ('basin','reservoir','water')\n  ORDER BY z_order asc\n) AS water", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "water", 
+      "geometry": "polygon", 
+      "id": "water", 
+      "name": "water", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "wetland",
-      "geometry": "polygon",
-      "id": "wetland",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "dbname": "gis",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "(select way,\"natural\" from planet_osm_polygon\nwhere \"natural\" in ('marsh','wetland')\n) as wetland",
-        "password": "gis",
-        "type": "postgis",
-        "port": "5432"
-      },
-      "class": "wetland"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "(select way,\"natural\" from planet_osm_polygon\nwhere \"natural\" in ('marsh','wetland')\n) as wetland", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "wetland", 
+      "geometry": "polygon", 
+      "id": "wetland", 
+      "name": "wetland", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "aero-poly",
-      "geometry": "polygon",
-      "id": "aero-poly",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,aeroway \nFROM planet_osm_polygon\nWHERE \"aeroway\" IN ('apron','runway','taxiway','helipad')\nORDER BY z_order asc ) AS aero_poly",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "aero poly"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,aeroway \nFROM planet_osm_polygon\nWHERE \"aeroway\" IN ('apron','runway','taxiway','helipad')\nORDER BY z_order asc ) AS aero_poly", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "aero poly", 
+      "geometry": "polygon", 
+      "id": "aero-poly", 
+      "name": "aero-poly", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "parking-area",
-      "geometry": "polygon",
-      "id": "parking-area",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "dbname": "gis",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "(select way,amenity from planet_osm_polygon\nwhere amenity = 'parking'\n) as parking",
-        "password": "gis",
-        "type": "postgis",
-        "port": "5432"
-      },
-      "class": "parking"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "(select way,amenity from planet_osm_polygon\nwhere amenity = 'parking'\n) as parking", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "parking", 
+      "geometry": "polygon", 
+      "id": "parking-area", 
+      "name": "parking-area", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-tunnels",
-      "geometry": "linestring",
-      "id": "route-tunnels",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( select way,highway from planet_osm_line \n  where highway in\n  ( 'motorway', 'motorway_link', 'trunk', 'trunk_link', \n    'primary', 'primary_link', 'secondary', 'secondary_link',\n    'tertiary', 'tertiary_link', 'residential', 'unclassified' )\n  and tunnel in ( 'yes', 'true', '1' )\n  order by z_order ) as roads",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route tunnel"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( select way,highway from planet_osm_line \n  where highway in\n  ( 'motorway', 'motorway_link', 'trunk', 'trunk_link', \n    'primary', 'primary_link', 'secondary', 'secondary_link',\n    'tertiary', 'tertiary_link', 'residential', 'unclassified' )\n  and tunnel in ( 'yes', 'true', '1' )\n  order by z_order ) as roads", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route tunnel", 
+      "geometry": "linestring", 
+      "id": "route-tunnels", 
+      "name": "route-tunnels", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-line",
-      "geometry": "linestring",
-      "id": "route-line",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( select way,highway,aeroway,\n    case when tunnel in ( 'yes', 'true', '1' ) then 'yes'::text\n      else 'no'::text end as tunnel,\n    case when service in ( 'parking_aisle',\n      'drive-through','driveway' ) then 'INT-minor'::text\n      else service end as service\n  from planet_osm_line\n  where highway in ( 'motorway', 'motorway_link',\n    'trunk', 'trunk_link', 'primary', 'primary_link',\n    'secondary', 'secondary_link', 'tertiary', 'tertiary_link', \n    'residential', 'unclassified', 'road', 'service',\n    'pedestrian', 'raceway', 'living_street' )\n  OR \"aeroway\" IN ('apron','runway','taxiway')\n  order by z_order) as route",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route line"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( select way,highway,aeroway,\n    case when tunnel in ( 'yes', 'true', '1' ) then 'yes'::text\n      else 'no'::text end as tunnel,\n    case when service in ( 'parking_aisle',\n      'drive-through','driveway' ) then 'INT-minor'::text\n      else service end as service\n  from planet_osm_line\n  where highway in ( 'motorway', 'motorway_link',\n    'trunk', 'trunk_link', 'primary', 'primary_link',\n    'secondary', 'secondary_link', 'tertiary', 'tertiary_link', \n    'residential', 'unclassified', 'road', 'service',\n    'pedestrian', 'raceway', 'living_street' )\n  OR \"aeroway\" IN ('apron','runway','taxiway')\n  order by z_order) as route", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route line", 
+      "geometry": "linestring", 
+      "id": "route-line", 
+      "name": "route-line", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-turning-circles",
-      "geometry": "point",
-      "id": "route-turning-circles",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT highway,way FROM planet_osm_point\n  WHERE \"highway\" = 'turning_circle' ) AS turning_circle",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "turning-circle"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT highway,way FROM planet_osm_point\n  WHERE \"highway\" = 'turning_circle' ) AS turning_circle", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "turning-circle", 
+      "geometry": "point", 
+      "id": "route-turning-circles", 
+      "name": "route-turning-circles", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-fill",
-      "geometry": "linestring",
-      "id": "route-fill",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "dbname": "gis",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( select way, highway, horse, bicycle, foot, \n    construction, aeroway,\n    case when tunnel in ('yes', 'true', '1')\n      then 'yes'::text\n      else tunnel end as tunnel,\n    case when bridge in ('yes','true','1','viaduct')\n      then 'yes'::text else bridge end as bridge,\n    case when railway in ('spur','siding')\n      or (railway='rail' and service in ('spur','siding','yard'))\n      then 'spur-siding-yard'::text else railway\n      end as railway,\n    case when service in \n      ('parking_aisle', 'drive-through', 'driveway')\n      then 'INT-minor'::text else service \n      end as service\n  from planet_osm_line\n  where highway is not null\n    or aeroway in ( 'runway','taxiway' )\n    or railway in ( 'light_rail', 'narrow_gauge', 'funicular',\n      'rail', 'subway', 'tram', 'spur', 'siding', 'platform',\n      'disused', 'abandoned', 'construction', 'miniature' )\n  order by z_order) as roads",
-        "password": "gis",
-        "type": "postgis",
-        "port": "5432"
-      },
-      "class": "route fill"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( select way, highway, horse, bicycle, foot, \n    construction, aeroway,\n    case when tunnel in ('yes', 'true', '1')\n      then 'yes'::text\n      else tunnel end as tunnel,\n    case when bridge in ('yes','true','1','viaduct')\n      then 'yes'::text else bridge end as bridge,\n    case when railway in ('spur','siding')\n      or (railway='rail' and service in ('spur','siding','yard'))\n      then 'spur-siding-yard'::text else railway\n      end as railway,\n    case when service in \n      ('parking_aisle', 'drive-through', 'driveway')\n      then 'INT-minor'::text else service \n      end as service\n  from planet_osm_line\n  where highway is not null\n    or aeroway in ( 'runway','taxiway' )\n    or railway in ( 'light_rail', 'narrow_gauge', 'funicular',\n      'rail', 'subway', 'tram', 'spur', 'siding', 'platform',\n      'disused', 'abandoned', 'construction', 'miniature' )\n  order by z_order) as roads", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route fill", 
+      "geometry": "linestring", 
+      "id": "route-fill", 
+      "name": "route-fill", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "building",
-      "geometry": "polygon",
-      "id": "building",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,building,aeroway\nFROM planet_osm_polygon\nWHERE (\"building\" IS NOT NULL\nAND \"building\" != 'no')\nOR \"aeroway\" IN ('terminal')\nORDER BY z_order asc ) AS building",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "building"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,building,aeroway\nFROM planet_osm_polygon\nWHERE (\"building\" IS NOT NULL\nAND \"building\" != 'no')\nOR \"aeroway\" IN ('terminal')\nORDER BY z_order asc ) AS building", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "building", 
+      "geometry": "polygon", 
+      "id": "building", 
+      "name": "building", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-bridge-0",
-      "geometry": "linestring",
-      "id": "route-bridge-0",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND (layer IS NULL OR layer = '0')\n  ORDER BY z_order asc\n ) AS bridge_0",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route bridge layer0 fill"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND (layer IS NULL OR layer = '0')\n  ORDER BY z_order asc\n ) AS bridge_0", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route bridge layer0 fill", 
+      "geometry": "linestring", 
+      "id": "route-bridge-0", 
+      "name": "route-bridge-0", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-bridge-1",
-      "geometry": "linestring",
-      "id": "route-bridge-1",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '1'\n  ORDER BY z_order asc\n ) AS bridge_1",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route bridge layer1 fill"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '1'\n  ORDER BY z_order asc\n ) AS bridge_1", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route bridge layer1 fill", 
+      "geometry": "linestring", 
+      "id": "route-bridge-1", 
+      "name": "route-bridge-1", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-bridge-2",
-      "geometry": "linestring",
-      "id": "route-bridge-2",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '2'\n  ORDER BY z_order asc\n ) AS bridge_2",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route bridge layer2 fill"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '2'\n  ORDER BY z_order asc\n ) AS bridge_2", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route bridge layer2 fill", 
+      "geometry": "linestring", 
+      "id": "route-bridge-2", 
+      "name": "route-bridge-2", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-bridge-3",
-      "geometry": "linestring",
-      "id": "route-bridge-3",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '3'\n  ORDER BY z_order asc\n ) AS bridge_3",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route bridge layer3 fill"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '3'\n  ORDER BY z_order asc\n ) AS bridge_3", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route bridge layer3 fill", 
+      "geometry": "linestring", 
+      "id": "route-bridge-3", 
+      "name": "route-bridge-3", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-bridge-4",
-      "geometry": "linestring",
-      "id": "route-bridge-4",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '4'\n  ORDER BY z_order asc\n ) AS bridge_4",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route bridge layer4 fill"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '4'\n  ORDER BY z_order asc\n ) AS bridge_4", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route bridge layer4 fill", 
+      "geometry": "linestring", 
+      "id": "route-bridge-4", 
+      "name": "route-bridge-4", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "route-bridge-5",
-      "geometry": "linestring",
-      "id": "route-bridge-5",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '5'\n  ORDER BY z_order asc\n ) AS bridge_5",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "route bridge layer5 fill"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,highway,railway,aeroway,tunnel\n  FROM planet_osm_line\n  WHERE ( \"highway\" IS NOT NULL\n  OR \"railway\" IS NOT NULL\n  OR \"aeroway\" IN ('apron','runway','taxiway') )\n  AND bridge IN ('yes','true','1','viaduct')\n  AND layer = '5'\n  ORDER BY z_order asc\n ) AS bridge_5", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "route bridge layer5 fill", 
+      "geometry": "linestring", 
+      "id": "route-bridge-5", 
+      "name": "route-bridge-5", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "placenames-medium",
-      "geometry": "point",
-      "id": "placenames-medium",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "( SELECT way,place,name\n  FROM planet_osm_point\n  WHERE place IN ('city','metropolis','town','large_town','small_town')\n) AS placenames",
-        "password": "gis",
-        "type": "postgis",
-        "dbname": "gis"
-      },
-      "class": "placename medium"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "( SELECT way,place,name\n  FROM planet_osm_point\n  WHERE place IN ('city','metropolis','town','large_town','small_town')\n) AS placenames", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "placename medium", 
+      "geometry": "point", 
+      "id": "placenames-medium", 
+      "name": "placenames-medium", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "highway-label",
-      "geometry": "linestring",
-      "id": "highway-label",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "Datasource": {
-        "geometry_field": "way",
-        "dbname": "gis",
-        "host": "localhost",
-        "user": "gis",
-        "extent": "",
-        "table": "(select way,name,highway, case when oneway in\n  ('yes','true','1') then 'yes'::text end as oneway\nfrom planet_osm_line\nwhere \"highway\" is not null\nand (\"name\" is not null or \"oneway\" is not null)\norder by z_order asc ) as highway_label",
-        "password": "gis",
-        "type": "postgis",
-        "port": "5432"
-      },
-      "class": "highway-label"
-    },
+        "dbname": "osm", 
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34", 
+        "geometry_field": "way", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "srid": 900913, 
+        "table": "(select way,name,highway, case when oneway in\n  ('yes','true','1') then 'yes'::text end as oneway\nfrom planet_osm_line\nwhere \"highway\" is not null\nand (\"name\" is not null or \"oneway\" is not null)\norder by z_order asc ) as highway_label", 
+        "type": "postgis", 
+        "user": ""
+      }, 
+      "class": "highway-label", 
+      "geometry": "linestring", 
+      "id": "highway-label", 
+      "name": "highway-label", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    }, 
     {
-      "name": "ne-admin-1",
-      "geometry": "linestring",
-      "id": "ne-admin-1",
-      "srs": "",
       "Datasource": {
-        "extent": "",
-        "port": "5432",
-        "host": "localhost",
-        "user": "gis",
-        "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_1_states_provinces_lines_shp.zip",
-        "password": "gis",
-        "type": "shape",
-        "dbname": "gis"
-      },
-      "class": ""
-    },
+        "dbname": "osm", 
+        "extent": "", 
+        "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_1_states_provinces_lines_shp.zip", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "type": "shape", 
+        "user": ""
+      }, 
+      "class": "", 
+      "geometry": "linestring", 
+      "id": "ne-admin-1", 
+      "name": "ne-admin-1", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": ""
+    }, 
     {
-      "name": "ne-admin-0",
-      "geometry": "linestring",
-      "id": "ne-admin-0",
-      "srs": "",
       "Datasource": {
-        "extent": "",
-        "dbname": "gis",
-        "host": "localhost",
-        "user": "gis",
-        "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_0_boundary_lines_land.zip",
-        "password": "gis",
-        "type": "shape",
-        "port": "5432"
-      },
-      "class": ""
+        "dbname": "osm", 
+        "extent": "", 
+        "file": "http://tilemill-data.s3.amazonaws.com/natural-earth-10m-1.3.0/admin_0_boundary_lines_land.zip", 
+        "host": "", 
+        "password": "", 
+        "port": "", 
+        "type": "shape", 
+        "user": ""
+      }, 
+      "class": "", 
+      "geometry": "linestring", 
+      "id": "ne-admin-0", 
+      "name": "ne-admin-0", 
+      "properties": {
+        "cache-features": "true"
+      }, 
+      "srs": ""
     }
-  ]
+  ], 
+  "Stylesheet": [
+    "style.mss", 
+    "borders.mss", 
+    "highway.mss", 
+    "labels.mss"
+  ], 
+  "_center": {
+    "lat": 0, 
+    "lon": 0, 
+    "zoom": 2
+  }, 
+  "_format": "png", 
+  "_interactivity": false, 
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
 }
