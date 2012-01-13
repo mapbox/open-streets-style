@@ -3,9 +3,12 @@
 ## OPEN STREETS CONFIGURATION OPTIONS ##
 
 # PostGIS connection setup
+dbname   = "osm"
+# leave the below as empty
+# string unless you know have
+# custom authentication needs
 host     = "" # localhost
 port     = "" # 5432
-dbname   = "osm"
 user     = "" # postgres
 password = ""
 
@@ -32,6 +35,10 @@ shoreline_300 = "./layers/shoreline_300.shp"
 # whole world is "-20037508.34,-20037508.34,20037508.34,20037508.34".
 extent = "-20037508.34,-20037508.34,20037508.34,20037508.34"
 
+# osm2pgsql table prefix - only change this is you explicitly imported
+# with a custom prefix (--prefix)
+prefix = 'planet_osm'
+
 # if you have > 2GB mem, turn this on for slightly faster rendering
 feat_caching = True
 
@@ -41,7 +48,7 @@ import json
 from sys import path
 from os.path import join
 
-mml = join(path[0], 'open-streets/open-streets.mml')
+mml = join(path[0], 'open-streets/project.mml')
 
 with open(mml, 'r') as f:
   newf = json.loads(f.read())
@@ -61,6 +68,8 @@ with open(mml, 'w') as f:
         layer["Datasource"]["password"] = password
         layer["Datasource"]["extent"] = extent
         layer["Datasource"]["srid"] = 900913
+        if prefix != 'planet_osm':
+            layer["Datasource"]["table"] = layer["Datasource"]["table"].replace('planet_osm',prefix)
     ds_file = layer["Datasource"].get("file")
     if ds_file:
         if layer["id"] == "shoreline_300":
