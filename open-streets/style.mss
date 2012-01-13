@@ -14,6 +14,12 @@ extent settings. See the README for more info.
 
 */
 
+
+
+
+
+
+
 /* ---- PALETTE ---- */
 
 @water:     #c0d8ff;
@@ -51,9 +57,9 @@ Map { background-color: @water; }
 }
 
 .wetland[zoom>10] {
-  polygon-pattern-file:url(../project/open-streets/res/wetland-8.png);
-  [zoom>13] { polygon-pattern-file:url(../project/open-streets/res/wetland-16.png); }
-  [zoom>15] { polygon-pattern-file:url(../project/open-streets/res/wetland-32.png); }
+  polygon-pattern-file:url(./res/wetland-8.png);
+  [zoom>13] { polygon-pattern-file:url(./res/wetland-16.png); }
+  [zoom>15] { polygon-pattern-file:url(./res/wetland-32.png); }
   polygon-pattern-alignment: global;
 }
 
