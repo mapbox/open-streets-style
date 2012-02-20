@@ -7,6 +7,8 @@ This style has been designed to work with a PostGIS database created with
 
 [View Demo](http://mapbox.github.com/open-streets-style/)
 
+You may also be interested in [OSM Bright](http://github.com/mapbox/osm-bright) which now supports osm2pgsql and is more actively maintained.
+
 [1]: http://wiki.openstreetmap.org/wiki/Osm2pgsql
 
 ## Requirements
