@@ -73,7 +73,7 @@ var map = new L.Map('map');
 // Don't show the 'Powered by Leaflet' text
 map.attributionControl.setPrefix('');
 map.setView(new L.LatLng(43.65, -79.38), 13).addLayer(
-    new L.TileLayer('http://{s}.tiles.mapbox.com/aj/1.0.0/open-streets-to/{z}/{x}/{y}.png', {
+    new L.TileLayer('http://{s}.tiles.mapbox.com/v3/mapbox.open-streets-nyc/{z}/{x}/{y}.png', {
         maxZoom: 16,
         scheme: 'tms',
         attribution: "Data &copy; <a href='http://openstreetmap.org'>OSM</a>, <a href='http://creativecommons.org/licenses/by-sa/3.0/'>CC-BY-SA</a>"
