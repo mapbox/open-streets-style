@@ -144,7 +144,7 @@ Map { background-color: @water; }
 /* Transparent buildings account for situations where routes go
    in or under them */
 .building[zoom>10][zoom<17] {
-  polygon-fill:@building,8;
+  polygon-fill:@building;
   [zoom=11] { polygon-opacity:0.1; }
   [zoom=12] { polygon-opacity:0.2; }
   [zoom=13] { polygon-opacity:0.3; }
